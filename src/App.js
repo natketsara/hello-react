@@ -31,23 +31,25 @@ class App extends Component {
 
   render() {
     return (
-      <Row>
-        {this.state.spaces != null
-          ? this.state.spaces.page.entities.map((data, index) => {
-              return (
-                <Col sm="6">
-                  <CreateCard
-                    key={index}
-                    image={data.imageUrl}
-                    spaceName={data.spaceName}
-                    venueName={data.venueName}
-                    price={data.price}
-                  />
-                </Col>
-              );
-            })
-          : null}
-      </Row>
+      <CardDeck>
+        <Row>
+          {this.state.spaces != null
+            ? this.state.spaces.page.entities.map((data, index) => {
+                return (
+                  <Col sm="6">
+                    <CreateCard
+                      key={index}
+                      image={data.imageUrl}
+                      spaceName={data.spaceName}
+                      venueName={data.venueName}
+                      price={data.price}
+                    />
+                  </Col>
+                );
+              })
+            : null}
+        </Row>
+      </CardDeck>
     );
   }
 }
