@@ -6387,3 +6387,24 @@ a {
 .CalendarDay__selected {
   background: #3c7ddc;
   border: 1px solid #3c7ddc; }
+
+.carddeck{
+  /* margin: 20px; */
+  /* margin-left: 20px; */
+  padding: 20px;
+  background-color: white;
+}
+
+.space{
+  font-size: 20px;
+  font-weight:bold;
+}
+
+.venue{
+  font-size: 18px;
+}
+
+.price{
+  font-size: 17px;
+  color:grey;
+}

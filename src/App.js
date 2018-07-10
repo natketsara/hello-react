@@ -31,7 +31,7 @@ class App extends Component {
 
   render() {
     return (
-      <CardDeck>
+      <CardDeck className="carddeck">
         <Row>
           {this.state.spaces != null
             ? this.state.spaces.page.entities.map((data, index) => {
@@ -48,6 +48,7 @@ class App extends Component {
                 );
               })
             : null}
+          <br />
         </Row>
       </CardDeck>
     );
@@ -66,9 +67,9 @@ class CreateCard extends Component {
       <Card>
         <CardImg top width="20%" src={image} alt="Card image cap" />
         <CardBody>
-          <CardTitle>{spaceName}</CardTitle>
-          <CardSubtitle>{venueName}</CardSubtitle>
-          <CardText>{price}/ชั่วโมง</CardText>
+          <CardTitle className="space">{spaceName}</CardTitle>
+          <CardSubtitle className="venue">at {venueName}</CardSubtitle>
+          <CardText className="price">฿{price}/ชั่วโมง</CardText>
         </CardBody>
       </Card>
     );
